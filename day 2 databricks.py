@@ -179,4 +179,25 @@ df1.write.mode("overwrite").option("path", "dbfs:/mnt/saunextadls/raw/output/sam
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC # Widgets
 
+# COMMAND ----------
+
+dbutils.help()
+
+# COMMAND ----------
+
+dbutils.widgets.help()
+
+# COMMAND ----------
+
+dbutils.widgets.combobox(name="database",defaultValue="default",choices=["default","json","sample","test"],label="databases")
+
+# COMMAND ----------
+
+dbutils.widgets.get("database")
+
+# COMMAND ----------
+
+dbutils.widgets.remove("database")
